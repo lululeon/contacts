@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ContactsRepo extends JpaRepository<Contact, Long> {
+
+    // naming convention => spring will auto-generate the ORM code
+    void deleteContactById(Long id);
 }
